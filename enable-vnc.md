@@ -7,4 +7,4 @@ P3-VNC
 vncserver
 ```
 
-[download](https://www.realvnc.com/en/connect/download/vnc/macos/) vnc client or using [noVnc](https://novnc.com/info.html)
+[download](https://www.realvnc.com/en/connect/download/viewer/macos/) vnc client or using [noVnc](https://novnc.com/info.html)

@@ -2,8 +2,10 @@
 
 ```
 curl -fsSL get.docker.com -o get-docker.sh
-sudo sh get-docker.sh --mirror Aliyun
-sudo usermod -aG docker pi
-sudo reboot
+sudo su
+get-docker.sh --mirror Aliyun
+usermod -aG docker pi
+reboot
+
 docker run arm32v7/hello-world
 ```

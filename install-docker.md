@@ -4,7 +4,7 @@
 curl -fsSL get.docker.com -o get-docker.sh
 sudo su
 get-docker.sh --mirror Aliyun
-usermod -aG docker pi
+usermod -aG docker $USER
 reboot
 
 docker run arm32v7/hello-world

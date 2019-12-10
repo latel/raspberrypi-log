@@ -9,7 +9,9 @@ touch SDCARD/SSH
 
 ## 启用vnc
 raspbian已经内置了realvnc connect，但是如果你没有插入显示器，则没有创建窗口环境，你需要自己创建一个虚拟的桌面
-see https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi
+
+> see: https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi
+
 ```
 vncserver -randr=1920x1080
 
@@ -41,6 +43,9 @@ vncserver -randr=1920x1080
 那么`10.43.108.236:1`便是vnc客户端可连接的地址
 
 ## 启用WIFI
+
+> see: https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+
 编辑`/etc/wpa_supplicant/wpa_supplicant.conf`文件即可
 ```conf
 # openwifi

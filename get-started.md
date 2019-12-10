@@ -7,6 +7,7 @@ touch SDCARD/SSH
 
 ## 启用vnc
 raspbian已经内置了realvnc connect，但是如果你没有插入显示器，则没有创建窗口环境，你需要自己创建一个虚拟的桌面
+see https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi
 ```
 vncserver
 

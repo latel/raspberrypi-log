@@ -9,7 +9,7 @@ touch SDCARD/SSH
 raspbian已经内置了realvnc connect，但是如果你没有插入显示器，则没有创建窗口环境，你需要自己创建一个虚拟的桌面
 see https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi
 ```
-vncserver
+vncserver -randr=1920x1080
 
 # VNC(R) Server 6.5.0 (r41824) ARMv6 (Aug 16 2019 00:24:44)
 # Copyright (C) 2002-2019 RealVNC Ltd.

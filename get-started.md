@@ -1,3 +1,5 @@
+## 启用SSH
+
 sd制作好之后，默认启用ssh， ssh默认用户名为pi，密码为raspberry
 
 ```
@@ -37,3 +39,22 @@ vncserver -randr=1920x1080
 # New desktop is raspberrypi:1 (10.43.108.236:1)
 ```
 那么`10.43.108.236:1`便是vnc客户端可连接的地址
+
+## 启用WIFI
+编辑`/etc/wpa_supplicant/wpa_supplicant.conf`文件即可
+```conf
+# openwifi
+network={
+	ssid="WiFi-NAME"
+	key_mgmt=NONE
+	priority=2
+}
+# wifi with psk, scan_ssid for a hidden network
+network={
+	ssid="WiFi-NAME-with-PSK"
+	scan_ssid=1
+	psk="password"
+	priority=11
+}
+
+```

@@ -153,3 +153,11 @@ sudo passwd --unlock root
 ```
 
 编辑sudoer文件，把pi用户删掉，这样pi用户就不能使用sudo来调用root账户权限了
+
+**额外的ssh安全保证**
+
+树莓派一般作为外网接入家庭局域网的起始点，ssh是最重要的入口，因此可以使用额外的手段来提升ssh服务的安全性
+
+1. 安装fail2ban，当一个ip产生过多错误时，自动加入黑名单
+
+		sudo apt install -y fail2ban

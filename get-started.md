@@ -161,3 +161,5 @@ sudo passwd --unlock root
 1. 安装fail2ban，当一个ip产生过多错误时，自动加入黑名单
 
 		sudo apt install -y fail2ban
+
+	安装完成后，参考这篇文章来配置：[https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-centos-7]()

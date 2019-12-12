@@ -63,3 +63,25 @@ network={
 }
 
 ```
+
+## 更新软件源
+
+see [https://github.com/latel/raspberrypi-log/blob/master/change-package-sourcelist.md]()
+
+## 更新系统
+
+要时常更新系统，防止漏洞导致被入侵，尤其是sshd.service
+
+```bash
+sudo apt upgrade
+```
+
+## 禁用密码登录，只允许证书登录
+
+生成密钥
+
+```basg
+ssh-keygen -t rsa
+```
+
+参考文章: [https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646346.html]()

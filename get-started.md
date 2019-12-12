@@ -107,6 +107,8 @@ PubkeyAuthentication yes
 PasswordAuthentication no
 ```
 
+配置文件说明请参考：[https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646032.html]()
+
 重启sshd服务
 
 ```bash
@@ -130,8 +132,6 @@ Host raspberrypi # 主机名
 ```
 
 这样，你就可以使用简化的命令来登录了 `ssh raspberrypi`
-
-参考文章: [https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646346.html]()
 
 ## 禁用pi用户提权
 

@@ -78,11 +78,58 @@ sudo apt upgrade
 
 ## 禁用密码登录，只允许证书登录
 
-生成密钥
+生成密钥，并加入信任
 
 ```basg
 ssh-keygen -t rsa
+touch ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
+
+sshd的配置文件位于: `/etc/ssh/sshd_config`，注意一下几个条目
+
+```conf
+# sshd监听端口，记得改成非标准端口如2222
+Port 2222
+
+# 记录鉴权日志
+SyslogFacility AUTH
+LogLevel INFO
+
+# 不允许远程登录root
+PermitRootLogin no
+# 严格模式，会检查使用的密钥的权限等
+StrictModes yes
+
+# 使用rsa私钥登录
+PubkeyAuthentication yes
+# 不允许使用密码登录
+PasswordAuthentication no
+```
+
+重启sshd服务
+
+```bash
+sudo systemctl restart sshd
+```
+
+这样你就可以使用私钥来登录了，在局域网中可以通过主机名来访问
+
+```bash
+ssh -i /path/to/id_rsa pi@raspberrypi.local -p2222
+```
+
+如果嫌弃每次都输入这么多麻烦可以配置下ssh配置文件`.ssh/config`，如：
+
+```conf
+Host raspberrypi # 主机名
+    HostName raspberrypi.local # 主机地址(主机名或者ip)
+    User pi # 用户名
+    IdentityFile /path/to/key # 私钥
+    Port 2222 # 指定端口
+```
+
+这样，你就可以使用简化的命令来登录了 `ssh raspberrypi`
 
 参考文章: [https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646346.html]()
 

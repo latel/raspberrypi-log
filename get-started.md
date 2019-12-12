@@ -85,3 +85,24 @@ ssh-keygen -t rsa
 ```
 
 参考文章: [https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646346.html]()
+
+## 禁用pi用户提权
+
+默认情况下，使用pi用户登录后，可以通过如下2个方式来使用root权限
+
+1. sudo su
+2. sudo xxxxx
+
+**从安全考虑，root权限最好只保留给root用户**
+
+设置root账户密码
+```bash
+sudo passwd root
+```
+
+启用root账户
+```bash
+sudo passwd --unlock root
+```
+
+编辑sudoer文件，把pi用户删掉，这样pi用户就不能使用sudo来调用root账户权限了

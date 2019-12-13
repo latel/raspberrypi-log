@@ -23,6 +23,7 @@ docker run arm32v7/hello-world
 ```
 {
   "registry-mirrors": [
+    "https://registry.docker-cn.com"
     "https://dockerhub.azk8s.cn",
     "https://hub-mirror.c.163.com"
   ]

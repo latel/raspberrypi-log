@@ -1,3 +1,9 @@
+# 安装docker
+
+## why docker
+
+## 安装docker
+
 通过安装docker，来同时部署多个服务，避免污染系统，方便日后维护
 
 ```
@@ -28,3 +34,12 @@ docker run arm32v7/hello-world
 $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
+
+验证新的源是否生效
+```
+docker info
+```
+
+## 常用的docker命令
+
+## 推荐的镜像

@@ -44,7 +44,7 @@ docker info
 
 ## 推荐的镜像
 
-树莓派使用arm架构，所以dockerhub上绝大部分基于x86架构的镜像是无法使用的，你可以通过搜索时包含关键词rpi来搜索
+树莓派使用arm架构，所以dockerhub上绝大部分基于x86架构的镜像是无法使用的，你可以通过搜索时包含关键词rpi、arm32v6、arm32v7或arm64v7来搜索
 
 安装portainer,以后可以勇敢portainer管理docker，免得需要ssh到树莓派上用命令行操作的麻烦
 ```bash

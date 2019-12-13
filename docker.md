@@ -71,5 +71,6 @@ docker run --device=/dev/vchiq --device=/dev/vcsm --volume=/opt/vc:/opt/vc --vol
 
 如果你希望构建自己的镜像来提供服务，可以考虑从如下几个基础镜像开始
 
+- alpine # alpine本身支持arm架构（待确认）
 - arm32v7/alpine
 - balenalib/rpi-raspbian

@@ -41,6 +41,12 @@ $ sudo systemctl restart docker
 docker info
 ```
 
+## 安装docker-compose
+
+```bash
+sudo pip3 install docker-compose
+```
+
 ## 常用的docker命令
 
 ## 推荐的镜像

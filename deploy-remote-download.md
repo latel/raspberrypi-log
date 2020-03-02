@@ -7,10 +7,12 @@
 ![xunlei remote download](https://raw.githubusercontent.com/latel/raspberrypi-log/master/xunlei-remote.png)
 
 **tips**
+
 迅雷强制下载目录包含一个二级目录`TDDOWNLOAD`，这会使得我们的硬盘目录显得很不优雅，解决这个问题的方法也很简单，就是创建容器时，调整下挂在卷对应的容器内目录，如`-v /mnt/deviceid/movies:/data/TDDOWNLOAD`，这样迅雷下载时就是实际想要存放的目录/mnt/deviceid/movies。
 
 **tips**
-如果你出现这样的错误`getting xunlei service info...the active key is not valid.`，请检查下挂在目录的权限
+
+如果你出现这样的错误`getting xunlei service info...the active key is not valid.`，请检查下挂载目录是否有写权限
 
 ## deluge
 

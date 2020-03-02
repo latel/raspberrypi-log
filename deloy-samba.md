@@ -53,7 +53,8 @@ Pid          Uid        DenyMode   Access      R/W        Oplock           Share
 ## 周边知识
 
 ### 给一个磁盘增加label
-好像只能给extfs格式的磁盘增加别名
+使用相应的文件格式软件包提供的程序来给磁盘添加label，如extfs的e2label, ntfs的ntfslabel
+注意要先取消挂载相应的磁盘，系统中已经挂载的磁盘可以同lsblk来查看
 ```bash
 #e2label /dev/<deviceid> <label>
 ```

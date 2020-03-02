@@ -28,7 +28,7 @@
 
 *这里不推荐使用exfat文件格式的存储器，本人尝试过会存在权限问题，估计和exfat-fuse的实现有关系*
 
-*搭建好后，综合体验了一下，发现速度比较慢，还需要具体定位，一是据说arm架构上smbv3协议速度比较慢，可以限制为smbv2，而是smb的参数还有调教空间*
+*搭建好后，综合体验了一下，发现速度比较慢，还需要具体定位，一是据说arm架构上smbv3协议速度比较慢，可以限制为smbv2，而是smb的参数还有调教空间([https://www.arm-blog.com/samba-finetuning-for-better-transfer-speeds/][https://www.arm-blog.com/samba-finetuning-for-better-transfer-speeds/])*
 
 ## 查看samba状态 
 

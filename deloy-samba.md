@@ -69,7 +69,7 @@ Pid          Uid        DenyMode   Access      R/W        Oplock           Share
 
 ## TODO
 
-1. 貌似搭建的samba服务不会再windows的网络邻居里展示，需要处理一下并且显示友好的设备名，对应树莓派就应该诸如raspberrypi.local之类的
+1. 貌似搭建的samba服务不会在windows的网络邻居里看到（当然直接输入地址是可以访问的），需要处理一下并且显示个友好的设备名，对应树莓派就应该诸如raspberrypi.local之类的
 
 
 [docker]: https://github.com/latel/raspberrypi-log/blob/master/docker.md

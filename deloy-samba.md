@@ -70,7 +70,7 @@ Pid          Uid        DenyMode   Access      R/W        Oplock           Share
 ## TODO
 
 1. 貌似搭建的samba服务不会在windows的网络邻居里看到（当然直接输入地址是可以访问的），需要处理一下并且显示个友好的设备名，对应树莓派就应该诸如raspberrypi.local之类的
-2. 上传下载速度都很慢，2.5mb/s左右，树莓派的网卡都是千兆网卡，usb端口也是usb3.0的，cpu负载也很低，不清楚为什么远没有达到理论速度，需要再看看。
+2. 上传下载速度都很慢，2.5mb/s左右，树莓派的网卡都是千兆网卡，usb端口也是usb3.0的，cpu负载也很低，不清楚为什么远没有达到理论速度(经测试偶尔上传速度可以达到32mb/s)，需要再看看。
 
 
 [docker]: https://github.com/latel/raspberrypi-log/blob/master/docker.md

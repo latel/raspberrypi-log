@@ -10,7 +10,7 @@
 ### 准备挂载目录
 
 ```bash
-#docker run -d -p <docker_host_ip>:445:445 \
+# docker run -d -p <docker_host_ip>:445:445 \
   -v /mnt/data:/share/data \
   -v /mnt/backups:/share/backups \
   --name <container name> trnape/rpi-samba \

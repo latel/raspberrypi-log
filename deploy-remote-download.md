@@ -3,6 +3,8 @@
 
 ## 迅雷远程下载服务
 
+[https://zhuanlan.zhihu.com/p/35438182](https://zhuanlan.zhihu.com/p/35438182)
+
 ## deluge
 
 ## And One More Thing

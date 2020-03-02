@@ -9,6 +9,14 @@
 
 ### 准备挂载目录
 
+#### 文件系统选择
+我简单对我新购置的一块希捷硬盘做了下各种文件系统下的速度对比
+
+再结合实用性考虑，所以最后选择了ntfs格式。
+当然每个人的需求场景不同，需要自行考虑最适合自己的。
+
+*这里不推荐使用exfat文件格式的存储器，本人尝试过会存在权限问题，估计和exfat-fuse的实现有关系*
+
 ### 启动容器
 
 ```bash
@@ -27,8 +35,6 @@
 
 参数解释：
 首先通过-v来定义2个数据卷以便允许docker内的samba服务可以访问宿主系统已挂载的存储设备，通过-u来配置3个samba服务的用户名和相应用户密码，最后通过-s来定义3个samba分享挂载点并指定挂载点名称、读写权限(ro,rw)和对应的可访问用户。如果需要允许匿名访问，则用户那一栏直接留空即可，如`-s "Backup directory:/share/backups:rw"`。
-
-*这里不推荐使用exfat文件格式的存储器，本人尝试过会存在权限问题，估计和exfat-fuse的实现有关系*
 
 *搭建好后，综合体验了一下，发现速度比较慢，还需要具体定位，一是据说arm架构上smbv3协议速度比较慢，可以限制为smbv2，而是smb的参数还有调教空间([https://www.arm-blog.com/samba-finetuning-for-better-transfer-speeds/](https://www.arm-blog.com/samba-finetuning-for-better-transfer-speeds/)*
 

@@ -50,6 +50,14 @@ Pid          Uid        DenyMode   Access      R/W        Oplock           Share
 301          1000       DENY_NONE  0x100081    RDONLY     NONE             /share/mi   .   Mon Mar  2 12:31:26 2020
 ```
 
+## 周边知识
+
+### 给一个磁盘增加label
+好像只能给extfs格式的磁盘增加别名
+```bash
+#e2label /dev/<deviceid> <label>
+```
+
 
 [docker]: https://github.com/latel/raspberrypi-log/blob/master/docker.md
 [trnape/rpi-samba]: https://hub.docker.com/r/trnape/rpi-samba

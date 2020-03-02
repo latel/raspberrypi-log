@@ -3,7 +3,7 @@
 
 ## 迅雷远程下载服务
 使用国内大厂的服务相对来说比较简单，当然如果你开通了会员的话，速度也会相对来说可以得到保证。
-推荐镜像[https://github.com/dingguotu/rpi-xware](https://github.com/dingguotu/rpi-xware)，不过这个镜像目前不支持多盘符，这意味着如果你想区分不同的文件类型，如电影，电视剧想放不同的文件目录时只能手动填写了（如图），有时间我来改下dockerfile来支持多盘符。
+推荐镜像[https://github.com/dingguotu/rpi-xware](https://github.com/dingguotu/rpi-xware)，不过这个镜像目前不支持多盘符，这意味着如果你想区分不同的文件类型，如电影，电视剧想放不同的文件目录时只能手动填写了（如图），[有时间我来改下dockerfile来支持多盘符](http://ptbsare.org/2014/10/25/linux%E4%B8%8B%E7%9A%84thunder%E5%AE%9E%E7%8E%B0-%E6%8A%98%E8%85%BE%E6%89%8B%E8%AE%B0/)。
 ![xunlei remote download](https://raw.githubusercontent.com/latel/raspberrypi-log/master/xunlei-remote.png)
 
 ## deluge

@@ -6,7 +6,11 @@
 推荐镜像[https://github.com/dingguotu/rpi-xware](https://github.com/dingguotu/rpi-xware)，不过这个镜像目前不支持多盘符，这意味着如果你想区分不同的文件类型，如电影，电视剧想放不同的文件目录时只能手动填写了（如图），[有时间我来改下dockerfile来支持多盘符，或者启动多了docker实例来区分](http://ptbsare.org/2014/10/25/linux%E4%B8%8B%E7%9A%84thunder%E5%AE%9E%E7%8E%B0-%E6%8A%98%E8%85%BE%E6%89%8B%E8%AE%B0/)。
 ![xunlei remote download](https://raw.githubusercontent.com/latel/raspberrypi-log/master/xunlei-remote.png)
 
+**tips**
 迅雷强制下载目录包含一个二级目录`TDDOWNLOAD`，这会使得我们的硬盘目录显得很不优雅，解决这个问题的方法也很简单，就是创建容器时，调整下挂在卷对应的容器内目录，如`-v /mnt/deviceid/movies:/data/TDDOWNLOAD`，这样迅雷下载时就是实际想要存放的目录/mnt/deviceid/movies。
+
+**tips**
+如果你出现这样的错误`getting xunlei service info...the active key is not valid.`，请检查下挂在目录的权限
 
 ## deluge
 

@@ -19,6 +19,7 @@
 ## Transmission
 
 ## aria2c
+优势是可以很方便的更新tracker
 
 ## And One More Thing
 这里推荐结合合适的媒体服务器如plex、emby等等，并配置这些媒体服务器自动减速远程下载服务器下载的文件目录，

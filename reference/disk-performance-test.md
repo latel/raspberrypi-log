@@ -4,9 +4,9 @@
 
 ## hdparm
 ```bash
-$ sudo hdparm -Tt /dev/sda2
+$ sudo hdparm -Tt /dev/sda1
 
-/dev/sda2:
+/dev/sda1:
  Timing cached reads:   1638 MB in  2.00 seconds = 818.75 MB/sec
  Timing buffered disk reads: 650 MB in  3.00 seconds = 216.55 MB/sec
 ```
@@ -16,15 +16,15 @@ $ sudo hdparm -Tt /dev/sda2
 ## dd
 
 ```bash
-$ dd count=50000 bs=1M if=/dev/zero of=~/test.img
+$ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 
 记录了50000+0 的读入
 记录了50000+0 的写出
 52428800000 bytes (52 GB, 49 GiB) copied, 1541.39 s, 34.0 MB/s
 ```
-上面的意思是向~/test.img写入50G数据，写入完成后会返回写入速度
+上面的意思是向/mnt/ironwolf/test.img写入50G数据，写入完成后会返回写入速度
 
-下面的表哥显示了在树莓派4b中使用rasbian sketch操作系统，分别对各种文件操作系统做了读写测试，以便为nas选择一个理想的
+下面的表格显示了在树莓派4b中使用rasbian sketch操作系统，分别对各种文件操作系统做了读写测试，以便为nas选择一个理想的
 文件系统格式
 
 经过上面的测试，可以发现ext4的读写性能最高，

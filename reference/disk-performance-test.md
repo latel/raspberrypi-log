@@ -2,7 +2,9 @@
 
 以下的测试均建立在磁盘设备是`/dev/sda1`，并且挂载在`/mnt/disk`的假设下。
 
-## hdparm
+## 性能测试工具
+
+### hdparm
 ```bash
 $ sudo hdparm -Tt /dev/sda1
 
@@ -13,7 +15,7 @@ $ sudo hdparm -Tt /dev/sda1
 上面的命令意思是检测/dev/sda1这个设备的读取速度，区分直接读取和缓存读取，
 可以发现，有缓存的数据读取速度会快得多
 
-## dd
+### dd
 
 ```bash
 $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
@@ -24,8 +26,20 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 ```
 上面的意思是向/mnt/ironwolf/test.img写入50G数据，写入完成后会返回写入速度
 
-下面的表格显示了在树莓派4b中使用rasbian sketch操作系统，购买的[希捷ironwolf硬盘](https://item.jd.com/54994027565.html)，分别对各种文件操作系统做了读写测试，以便为nas选择一个理想的
-文件系统格式
+## 不同文件系统性能测试
+
+下面的测试基于一下假设:
+
+- 设备型号为树莓派4b
+- 操作系统为rasbian sketch32位
+- 存储设备位购买的[希捷ironwolf硬盘](https://item.jd.com/54994027565.html)
+- 读取测试使用hdparm，写入测试使用dd
+
+| 文件系统 | 读取    | 读取（缓存） | 写入    |
+| -------- | ------- | ------------ | ------- |
+| ntfs     | 216MB/s | 818MB/s      | 34MB/s  |
+| ext4     | 200Mb/s | 881MB/s      | 169MB/s |
+| exfat    | 217MB/s | 806MB/s      | 133MB/s |
 
 经过上面的测试，可以发现ext4的读写性能最高，
 但是需要考虑的是，如果硬盘损坏的话，相对来说ntfs的修复工具生态更成熟一些，毕竟数据的安全也是很重要的考虑项（别问我为什么知道，惨痛的教训）。···

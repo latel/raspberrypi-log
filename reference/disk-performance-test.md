@@ -24,7 +24,7 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 ```
 上面的意思是向/mnt/ironwolf/test.img写入50G数据，写入完成后会返回写入速度
 
-下面的表格显示了在树莓派4b中使用rasbian sketch操作系统，分别对各种文件操作系统做了读写测试，以便为nas选择一个理想的
+下面的表格显示了在树莓派4b中使用rasbian sketch操作系统，购买的[希捷ironwolf硬盘](https://item.jd.com/54994027565.html)，分别对各种文件操作系统做了读写测试，以便为nas选择一个理想的
 文件系统格式
 
 经过上面的测试，可以发现ext4的读写性能最高，

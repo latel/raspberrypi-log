@@ -28,7 +28,7 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 
 ## 不同文件系统性能测试
 
-下面的测试基于一下假设:
+下面的测试基于以下假设:
 
 - 设备型号为树莓派4b
 - 操作系统为rasbian sketch32位

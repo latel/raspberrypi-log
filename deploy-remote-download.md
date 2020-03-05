@@ -18,8 +18,16 @@
 
 ## Transmission
 
-## aria2c
-优势是可以很方便的更新tracker
+## aria2
+
+### aria2 ui
+aria2应用的是c/s架构，并且只实现了s端，c端一般通过rpc同s端通信来控制下载的各种操作，因此还需要选择一个合适的客户端，一般选择一个网页端实现就可以了。
+目前的选择可以考虑:
+
++ [ziahamza/webui-aria2](https://github.com/ziahamza/webui-aria2)和
++ [mayswind/AriaNg](https://github.com/mayswind/AriaNg)
+
+如果你不喜欢网页端操作，更喜欢类似迅雷之类的客户端体验，你也可以自行搜索下macOS和windows下的相应实现。
 
 ## And One More Thing
 这里推荐结合合适的媒体服务器如plex、emby等等，并配置这些媒体服务器自动减速远程下载服务器下载的文件目录，

@@ -59,8 +59,5 @@ $dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
 
 ### 使用dd备份系统
 ```bash
-$dd if=/dev/<系统盘符> of=/dev/<存储位置>/system.img
+$dd if=/dev/<系统盘符> of=<存储位置>/system.img
 ```
-
- Timing buffered disk reads: 650 MB in  3.00 seconds = 216.55 MB/secdd
- Timing buffered disk reads: 650 MB in  3.00 seconds = 216.55 MB/sec

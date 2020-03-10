@@ -19,4 +19,6 @@
 ## FAQ
 
 ### 部署反向代理的nginx占用了大量的磁盘io
-试着把关闭proxy_buffering参数，请参考这篇文章：https://blog.csdn.net/thor_qm/article/details/21548137。
+试着把关闭proxy_buffering参数，
+定位磁盘负载高的问题：https://www.cnblogs.com/felixzh/p/9002143.html
+定位nginx反向代理占用大量磁盘io的问题：https://blog.csdn.net/thor_qm/article/details/21548137。

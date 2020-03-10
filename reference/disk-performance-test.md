@@ -43,3 +43,16 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 
 经过上面的测试，可以发现ext4的读写性能最高，
 但是需要考虑的是，如果硬盘损坏的话，相对来说ntfs的修复工具生态更成熟一些，毕竟数据的安全也是很重要的考虑项（别问我为什么知道，惨痛的教训）。···
+
+
+## FAQ 
+
+### dd时很慢，如何显示dd进度？
+可以借助程序`pv`来统计
+
+```bash
+dd count=5000 bs=1M if=/dev/zero | pv | sudo dd of=/o.img
+```
+
+### dd错误提示dd: bs: illegal numeric value
+这是因为某些 SD 卡接受的 bs（Block Size）單位必須是小寫（某些則是大寫）。所以你試試看把指令中国呢的bs单位改为小写的m或者反之。

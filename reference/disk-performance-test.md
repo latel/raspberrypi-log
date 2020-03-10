@@ -51,7 +51,7 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 可以借助程序`pv`来统计
 
 ```bash
-dd count=5000 bs=1M if=/dev/zero | pv | sudo dd of=/o.img
+dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
 ```
 
 ### dd错误提示dd: bs: illegal numeric value

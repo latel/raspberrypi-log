@@ -51,8 +51,16 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 可以借助程序`pv`来统计
 
 ```bash
-dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
+$dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
 ```
 
 ### dd错误提示dd: bs: illegal numeric value
 这是因为某些 SD 卡接受的 bs（Block Size）單位必須是小寫（某些則是大寫）。所以你試試看把指令中bs的单位改为小写的m或者反之。
+
+### 使用dd备份系统
+```bash
+$dd if=/dev/<系统盘符> of=/dev/<存储位置>/system.img
+```
+
+ Timing buffered disk reads: 650 MB in  3.00 seconds = 216.55 MB/secdd
+ Timing buffered disk reads: 650 MB in  3.00 seconds = 216.55 MB/sec

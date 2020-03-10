@@ -55,4 +55,4 @@ dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
 ```
 
 ### dd错误提示dd: bs: illegal numeric value
-这是因为某些 SD 卡接受的 bs（Block Size）單位必須是小寫（某些則是大寫）。所以你試試看把指令中国呢的bs单位改为小写的m或者反之。
+这是因为某些 SD 卡接受的 bs（Block Size）單位必須是小寫（某些則是大寫）。所以你試試看把指令中bs的单位改为小写的m或者反之。

@@ -165,3 +165,9 @@ sudo passwd --unlock root
 ```
 
 编辑sudoer文件，把pi用户删掉，这样pi用户就不能使用sudo来调用root账户权限了
+
+## 更新固件和内核
+```bash
+sudo rpi-update
+```
+注意，更新地址貌似被和谐了，可能需要配个代理

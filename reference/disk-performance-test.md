@@ -54,10 +54,24 @@ $ dd count=50000 bs=1M if=/dev/zero of=/mnt/ironwolf/test.img
 $dd count=5000 bs=1M if=/dev/zero | pv | dd of=/test.img
 ```
 
+如果你需要显示预计剩余时间，可以为pv命令提供-s参数表明实际大小，例如
+
+```bash
+$dd count=5000 bs=1M if=/dev/zero | pv -s 4G | dd of=/test.img
+```
+
 ### dd错误提示dd: bs: illegal numeric value
 这是因为某些 SD 卡接受的 bs（Block Size）單位必須是小寫（某些則是大寫）。所以你試試看把指令中bs的单位改为小写的m或者反之。
 
 ### 使用dd备份系统
 ```bash
 $dd if=/dev/<系统盘符> of=<存储位置>/system.img
+```
+
+在macos中dd会比较慢，可以使用实际设备对应的raw设备版本，例如：
+
+```
+$dd if=/dev/disk3 of=<存储位置>/system.img
+# 可以更换为如下版本，可极大提升macos下dd的速度
+$dd if=/dev/rdisk3 of=<存储位置>/system.img
 ```

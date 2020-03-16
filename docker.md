@@ -89,3 +89,10 @@ ResilioSync, seafile, emby
 - alpine # alpine本身支持arm架构（待确认）
 - arm32v7/alpine
 - balenalib/rpi-raspbian
+
+
+## FAQ
+
+### 如果容器里的服务需要访问被和谐的地址如何处理
+可以在创建容器时指定HTTP_PROXY,HTTPS_PROXY, http_proxy和https_proxy四个环境变量，为一个可用的代理地址。
+这个不能保证一定能解决问题，因为容器内的服务很有可能不会遵守这些环境变量的设计，不过值得一试。

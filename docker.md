@@ -19,13 +19,11 @@ docker run arm32v7/hello-world
 
 ### 更换dockerhub源
 
-对于使用 systemd 的系统，请在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）
+对于使用 systemd 的系统，请在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件），这里使用的是清华大学的镜像，请根据自己需要灵活选择。
 ```
 {
   "registry-mirrors": [
-    "https://registry.docker-cn.com"
-    "https://dockerhub.azk8s.cn",
-    "https://hub-mirror.c.163.com"
+    "https://docker.mirrors.ustc.edu.cn"
   ]
 }
 ```

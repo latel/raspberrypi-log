@@ -65,6 +65,8 @@ mkdir hassio
 sudo curl -sL https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh | bash -s -- -m raspberrypi4 -d /home/pi/hassio
 ```
 
+DEPRECATED: 官方已经不再支持这种安装方式，https://github.com/home-assistant/supervised-installer
+
 ### rpi-samba
 samba服务，方便用电脑管理文件系统
 ```bash

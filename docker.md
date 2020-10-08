@@ -1,3 +1,7 @@
+>
+> TODO: 安装docker时默认开启usernamepsace，以避免各种镜像的账户不统一导致的权限问题不好控制
+>
+
 # 安装docker
 
 ## why docker
